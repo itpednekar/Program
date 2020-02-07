@@ -1,0 +1,65 @@
+package test;
+
+import java.util.Scanner;
+
+import org.omg.Messaging.SyncScopeHelper;
+
+
+public class Program 
+{
+	public static void main(String[] args)
+	{
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter no n*n : ");
+		int n = sc.nextInt();
+		int[][] matrix = new int [n][n];
+		for(int i=0; i<n; i++)
+		{
+			System.out.println("Enter row "+i);
+			for(int j=0; j<n; j++)
+			{
+				matrix[i][j] = sc.nextInt();
+			}
+		}
+		System.out.println("Original Matrix  :  ");
+		Program.printMatrix(matrix,n);
+		
+		//ROTATION LOGIC
+		int level = 0;
+		int last = n-1;
+		int totalNoOfLevels = n/2;
+		while (level<totalNoOfLevels) 
+		{
+			for(int i=level;i<last;++i)
+			{
+				matrix[level][ i] = Program.swap(matrix[level][ i], matrix[level][ i] = matrix[i][last]);
+				matrix[level][ i] = Program.swap(matrix[level][ i], matrix[level][ i] = matrix[last][last-i+level]);
+				matrix[level][ i] = Program.swap(matrix[level][ i], matrix[level][ i] = matrix[last-i+level][level]);
+			}
+			level++;
+			--last;
+		}
+		Program.printMatrix(matrix,n);
+	}
+
+	private static int swap(int a, int b) 
+	{
+		return a;
+	}
+	private static void printMatrix(int[][] matrix, int n) 
+	{
+		
+		for(int i=0; i<n; i++)
+		{
+			for(int j=0; j<n; j++)
+			{
+				 System.out.print(matrix[i][j]+"  ");
+			}
+			System.out.println();
+		}
+		
+	}
+
+	
+
+}

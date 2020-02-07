@@ -1,0 +1,29 @@
+package test;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int [] arr =  {20,10,30,50,40, 60};
+		
+		System.out.println("Enter element to be searched : ");
+		int element = sc.nextInt();
+		
+		Program.linerSearch(arr, element);
+		Program.binarySearch(arr, element);
+
+	}
+
+	private static void binarySearch(int[] arr, int element) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void linerSearch(int[] arr, int element) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

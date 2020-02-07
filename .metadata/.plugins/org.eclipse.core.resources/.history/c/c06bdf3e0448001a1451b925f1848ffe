@@ -1,0 +1,31 @@
+package test;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a string : ");
+		String str = sc.nextLine();
+		
+		int n = str.length();
+		
+		char [] strArray = str.toCharArray();
+		
+		char [] revString = new char[30];
+		
+		for(int i=0, j=n;i<strArray.length - 1;i++,j--)
+		{
+			revString[i] = strArray[j];
+			System.out.println(revString);
+			
+		}
+		
+		System.out.println(revString);
+		
+		
+
+	}
+
+}
