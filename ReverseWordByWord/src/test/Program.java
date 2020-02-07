@@ -10,7 +10,7 @@ public class Program {
 		String str = sc.nextLine();
 		
 		String [] word = str.split(" ");
-	    for(int i=0; i<word.length-1; i++)
+	    for(int i=0; i<word.length - 1; i++)
 	    {
 	    	String second = word[word.length-1];
 	        for(int j=0; j<second.length(); j++)
