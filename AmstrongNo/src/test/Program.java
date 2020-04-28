@@ -28,9 +28,7 @@ public class Program {
 	    if(num == sum)
 	    	System.out.println("Amstrong No");
 	    else
-	    	System.out.println("Not Amstrong No");
-	   
-		
+	    	System.out.println("Not Amstrong No");	
 	}
 
 }

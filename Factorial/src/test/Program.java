@@ -1,20 +1,28 @@
 package test;
 
-import java.util.Scanner;
-
 public class Program {
-	
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter a no : ");
-		int num = sc.nextInt();
+	 static int fact = 1;
+	public static void main(String[] args) 
+	{
+		/*
+		int n =4 ;
 		int fact = 1;
-		int n = num;
-		
-		for(int i=n;i>0;i--) {
+		for(int i=1; i<=n;i++)
 			fact = fact * i;
-		}
+		System.out.println(fact);*/
+		int n = 7;
+		factorial(n);
 		System.out.println(fact);
+	}
+   
+	private static int factorial(int i) 
+	{
+		if(i!=0)
+		{
+			fact = fact * i;
+		    return  factorial(i-1);
+		}
+		return 1;
 	}
 
 }

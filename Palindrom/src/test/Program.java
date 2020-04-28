@@ -11,7 +11,7 @@ public class Program {
 		boolean flag = false;
 		int len = str.length();
 		char [] strArr = str.toCharArray();
-		for(int i=0;i<len;i++)
+		for(int i=0;i<len/2;i++)
 		{
 			if(strArr[i] != strArr[len - i - 1])
 			{
